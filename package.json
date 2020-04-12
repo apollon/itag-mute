@@ -1,0 +1,22 @@
+{
+  "name": "itag-mute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apollon/itag-mute.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.8.3",
+    "ts-node": "^8.8.2",
+    "@abandonware/noble": "^1.9.2-8",
+    "loudness": "^0.3.0"
+  }
+}
