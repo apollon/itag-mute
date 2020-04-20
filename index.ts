@@ -1,5 +1,6 @@
-import * as noble  from "@abandonware/noble"
+import * as AudioDevices from "macos-audio-devices"
 import { ITag, Event } from "./itag"
+
 
 const tag = new ITag()
 
@@ -9,8 +10,11 @@ tag.on(Event.Connect, () => {
 tag.on(Event.Disconnect, () => {
 	console.log(`tag disconnected`)
 })
-tag.on(Event.Click, () => {
+tag.on(Event.Click, async () => {
 	console.log(`tag clicked`)
+
+	const device = await AudioDevices.getDefaultInputDevice()
+	AudioDevices.toggleDeviceMute(device.id)
 })
 
 console.log(`scanning for peripherals...`)
