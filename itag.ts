@@ -71,8 +71,6 @@ export class ITag {
 
 						this.onEvent(Event.Disconnect)
 					})
-
-					
 				}
 
 				// TODO: what about error?
