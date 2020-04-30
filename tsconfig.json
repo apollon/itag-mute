@@ -3,6 +3,16 @@
 		"noImplicitAny": true,
 		"diagnostics": true,
 		"noImplicitThis": true,
-		"lib": ["ES2015", "DOM"]
-	}
+		"strictNullChecks": true,
+		"lib": ["ES2015", "DOM"],
+		"baseUrl": ".",
+		"paths": {
+			"*": ["node_modules/*"]
+		},
+		"outDir": "dist",	  
+	},
+	"include": [
+		".",
+		"src/**/*"
+	  ]	
 }
